@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+
+  <body>
+
+    <p id="words">0</p>
+    <script>
+      console.log("testing");
+      var string = "";
+      for (var i = 0; i < 10; i++) {
+        //console.log(i);
+        string += i;
+      }
+      //var i = -1;
+      //console.log(string);
+        document.addEventListener("click", function() {
+          var p = document.getElementById("words");
+          var insideP = parseInt(p.innerHTML);
+          if (insideP < 6) {
+            p.innerHTML = (insideP += 1);
+
+
+
+        }
+      });
+
+
+      </script>
+
+  </body>
+</html>
