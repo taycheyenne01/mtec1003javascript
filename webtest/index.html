@@ -2,11 +2,37 @@
   <head>
     <title>Test</title>
   </head>
-
   <body>
+    <canvas id= "myCanvas" width="600" height="600"></canvas>
 
-    <p id="words">0</p>
     <script>
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    function drawRect(xX) {
+      ctx.beginPath();
+      ctx.lineWidth = "5";
+      ctx.strokeStyle = "purple";
+      ctx.rect(x, 5, 100, 100);
+      ctx.stroke();
+    }
+
+    drawRect(5);
+
+    var x = 5;
+
+    function moveRect() {
+      ctx.clearRect(0, 0, 600, 600);
+      drawRect(x += 10);
+      if(x<=  400){
+      requestAnimationFrame(moveRect);
+      }
+    }
+
+
+    moveRect();
+/*
       console.log("testing");
       var string = "";
       for (var i = 0; i < 10; i++) {
@@ -32,5 +58,6 @@
       else {console.log ("odd")}
 
     } party_tester(5);
+    */
       </script>
 </html>
